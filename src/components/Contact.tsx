@@ -66,7 +66,7 @@ const Contact = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-screen"
+      className="relative py-16 sm:py-20 md:py-24 overflow-hidden min-h-screen z-10"
     >
       <div className="absolute inset-0 z-0">
         <motion.div

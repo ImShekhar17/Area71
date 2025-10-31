@@ -99,7 +99,7 @@ export default function FloorPlans() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/90 z-[90] flex items-center justify-center p-4"
           onClick={() => setSelectedPlan(null)}
         >
           <motion.div

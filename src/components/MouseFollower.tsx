@@ -36,7 +36,7 @@ const MouseFollower = () => {
   return (
     <>
       <motion.div
-        className="fixed pointer-events-none z-50 mix-blend-difference hidden md:block"
+        className="fixed pointer-events-none z-[95] mix-blend-difference hidden md:block"
         animate={{
           x: mousePosition.x - 8,
           y: mousePosition.y - 8,
@@ -48,7 +48,7 @@ const MouseFollower = () => {
       </motion.div>
 
       <motion.div
-        className="fixed pointer-events-none z-50 hidden md:block"
+        className="fixed pointer-events-none z-[95] hidden md:block"
         animate={{
           x: mousePosition.x - 20,
           y: mousePosition.y - 20,

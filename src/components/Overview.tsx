@@ -52,6 +52,7 @@ export default function Overview() {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
+            className="px-2 sm:px-0"
           >
             <p className="text-sm sm:text-base lg:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
               Birla Sector 71 is an iconic residential development by Birla Estates, redefining modern living in Central Gurgaon. Spread over 5.5 acres with meticulously planned towers, the project combines luxury architecture with sustainable living. From expansive layouts to stellar amenities, Birla Sector 71 is where your lifestyle meets innovation.

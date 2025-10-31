@@ -44,28 +44,28 @@ export default function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
         scrolled
           ? 'bg-white/80 backdrop-blur-xl shadow-lg'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
         <div className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-1.5 sm:space-x-2"
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-lg sm:text-xl">B</span>
+            <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-md flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-base sm:text-lg md:text-xl">B</span>
             </div>
-            <div>
-              <h1 className={`text-xl sm:text-2xl font-bold tracking-tight ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            <div className="min-w-0">
+              <h1 className={`text-base sm:text-xl md:text-2xl font-bold tracking-tight ${scrolled ? 'text-gray-900' : 'text-white'}`}>
                 BIRLA<span className="text-amber-500">71</span>
               </h1>
-              <p className={`text-[10px] sm:text-xs tracking-wider ${scrolled ? 'text-gray-600' : 'text-gray-200'}`}>
+              <p className={`text-[9px] sm:text-[10px] md:text-xs tracking-wider ${scrolled ? 'text-gray-600' : 'text-gray-200'}`}>
                 BY BIRLA ESTATES
               </p>
             </div>
@@ -103,9 +103,9 @@ export default function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden p-2 ${scrolled ? 'text-gray-900' : 'text-white'}`}
+            className={`lg:hidden p-1.5 sm:p-2 flex-shrink-0 ${scrolled ? 'text-gray-900' : 'text-white'}`}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
           </button>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[110] lg:hidden"
               onClick={() => setMobileMenuOpen(false)}
             />
             <motion.div
@@ -126,30 +126,30 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-gradient-to-b from-gray-900 to-black text-white z-50 lg:hidden overflow-y-auto shadow-2xl"
+              className="fixed right-0 top-0 h-full w-72 max-w-[85vw] sm:w-80 bg-gradient-to-b from-gray-900 to-black text-white z-[120] lg:hidden overflow-y-auto shadow-2xl"
             >
-              <div className="p-6 pb-24">
-                <div className="flex items-center justify-between mb-8 sticky top-0 bg-gradient-to-b from-gray-900 to-transparent pb-4 z-10">
+              <div className="p-4 sm:p-6 pb-20 sm:pb-24">
+                <div className="flex items-center justify-between mb-6 sm:mb-8 sticky top-0 bg-gradient-to-b from-gray-900 to-transparent pb-3 sm:pb-4 z-10">
                   <div className="flex items-center space-x-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-md flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">B</span>
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-md flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-lg sm:text-xl">B</span>
                     </div>
-                    <div>
-                      <h1 className="text-xl font-bold tracking-tight">
+                    <div className="min-w-0">
+                      <h1 className="text-lg sm:text-xl font-bold tracking-tight">
                         BIRLA<span className="text-amber-400">71</span>
                       </h1>
-                      <p className="text-[10px] tracking-wider text-gray-400">BY BIRLA ESTATES</p>
+                      <p className="text-[9px] sm:text-[10px] tracking-wider text-gray-400">BY BIRLA ESTATES</p>
                     </div>
                   </div>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 hover:bg-white/10 rounded-full transition-colors flex-shrink-0"
+                    className="p-1.5 sm:p-2 hover:bg-white/10 rounded-full transition-colors flex-shrink-0"
                   >
-                    <X size={24} />
+                    <X size={20} className="sm:w-6 sm:h-6" />
                   </button>
                 </div>
 
-                <nav className="space-y-2 mb-8 overflow-y-visible">
+                <nav className="space-y-1.5 sm:space-y-2 mb-6 sm:mb-8 overflow-y-visible">
                   {navItems.map((item, index) => (
                     <motion.button
                       key={item.name}
@@ -157,10 +157,10 @@ export default function Header() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}
                       onClick={() => scrollToSection(item.name)}
-                      className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl hover:bg-white/10 transition-all group"
+                      className="w-full flex items-center space-x-2.5 sm:space-x-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl hover:bg-white/10 transition-all group"
                     >
-                      <item.icon className="text-amber-400 group-hover:scale-110 transition-transform" size={20} />
-                      <span className="font-medium text-left">{item.name}</span>
+                      <item.icon className="text-amber-400 group-hover:scale-110 transition-transform flex-shrink-0" size={18} />
+                      <span className="font-medium text-left text-sm sm:text-base">{item.name}</span>
                     </motion.button>
                   ))}
                 </nav>
@@ -170,9 +170,9 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   onClick={handleScheduleVisit}
-                  className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-400 to-amber-600 text-white px-6 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-amber-500/50 transition-all mb-4"
+                  className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-400 to-amber-600 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:shadow-xl hover:shadow-amber-500/50 transition-all mb-3 sm:mb-4"
                 >
-                  <Phone size={18} />
+                  <Phone size={16} className="sm:w-[18px] sm:h-[18px]" />
                   <span>Schedule Visit</span>
                 </motion.button>
 
@@ -180,17 +180,17 @@ export default function Header() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="border-t border-white/20 pt-6 mt-6"
+                  className="border-t border-white/20 pt-4 sm:pt-6 mt-4 sm:mt-6"
                 >
-                  <p className="text-sm text-gray-400 mb-3">Contact Information</p>
-                  <div className="space-y-3">
-                    <a href="tel:+919876543210" className="flex items-center space-x-2 text-sm hover:text-amber-400 transition-colors">
-                      <Phone size={16} />
-                      <span>+91 98765 43210</span>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2.5 sm:mb-3">Contact Information</p>
+                  <div className="space-y-2.5 sm:space-y-3">
+                    <a href="tel:+919876543210" className="flex items-center space-x-2 text-xs sm:text-sm hover:text-amber-400 transition-colors">
+                      <Phone size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
+                      <span className="break-all">+91 98765 43210</span>
                     </a>
-                    <a href="mailto:info@birla71.com" className="flex items-center space-x-2 text-sm hover:text-amber-400 transition-colors">
-                      <Mail size={16} />
-                      <span>info@birla71.com</span>
+                    <a href="mailto:info@birla71.com" className="flex items-center space-x-2 text-xs sm:text-sm hover:text-amber-400 transition-colors">
+                      <Mail size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
+                      <span className="break-all">info@birla71.com</span>
                     </a>
                   </div>
                 </motion.div>

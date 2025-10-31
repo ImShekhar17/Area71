@@ -26,7 +26,7 @@ export default function Amenities() {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
 
   return (
-    <section id="amenities" ref={containerRef} className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section id="amenities" ref={containerRef} className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden z-10">
       <motion.div
         style={{ y }}
         className="absolute inset-0 z-0"
